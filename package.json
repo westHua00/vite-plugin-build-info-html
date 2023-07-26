@@ -1,0 +1,22 @@
+{
+  "name": "vite-plugin-build-info-html",
+  "version": "1.0.0",
+  "description": "a vite plugin to generate build info page",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vite",
+    "build",
+    "git"
+  ],
+  "author": "845128109@qq.com",
+  "license": "ISC",
+  "peerDependencies": {
+    "vite": ">=2.0.0"
+  },
+  "devDependencies": {
+    "execa": "^7.1.1"
+  }
+}
