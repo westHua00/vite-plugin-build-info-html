@@ -3,7 +3,7 @@
  * @Author: weipeng11132@navinfo.com
  * @Date: 2023-07-25 15:01:41
  * @LastEditors: weipeng11132@navinfo.com
- * @LastEditTime: 2023-07-27 11:06:01
+ * @LastEditTime: 2023-07-27 15:10:48
  * @FilePath: \vite-plugin-build-info-html\src\index.js
  */
 import fs from "fs";
@@ -81,7 +81,7 @@ async function buildInfo(options = {}) {
 
   let infoPath = "";
   return {
-    name: "vite-plugin-build-info",
+    name: "vite-plugin-build-info-html",
     apply: "build",
     configResolved(config) {
       infoPath = `${config.root}/${config.build.outDir}/info.html`;
