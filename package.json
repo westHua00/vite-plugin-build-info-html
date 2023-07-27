@@ -1,10 +1,9 @@
 {
   "name": "vite-plugin-build-info-html",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "a vite plugin to generate build info page",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
-  "type": "module",
   "exports": {
     ".": {
       "require": "./dist/index.cjs",
