@@ -3,7 +3,7 @@
  * @Author: weipeng11132@navinfo.com
  * @Date: 2023-07-25 15:01:41
  * @LastEditors: weipeng11132@navinfo.com
- * @LastEditTime: 2023-07-26 17:40:21
+ * @LastEditTime: 2023-07-27 11:06:01
  * @FilePath: \vite-plugin-build-info-html\src\index.js
  */
 import fs from "fs";
@@ -67,7 +67,7 @@ async function buildInfo(options = {}) {
             <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
             <title>build-info</title>
         </head>
-        <body style="display:flex;justify-content: center; align-items:center; width: 90vw;height:90vh;">
+        <body style="display:flex;justify-content: center; align-items:center; width: 90vw; padding: 20px;">
             <noscript>
                 <strong>
                     We're sorry but html doesn't work properly without
