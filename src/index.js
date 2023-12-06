@@ -3,7 +3,7 @@
  * @Author: weipeng11132@navinfo.com
  * @Date: 2023-07-25 15:01:41
  * @LastEditors: weipeng11132@navinfo.com
- * @LastEditTime: 2023-12-06 11:56:52
+ * @LastEditTime: 2023-12-06 14:10:35
  * @FilePath: \vite-plugin-build-info-html\src\index.js
  */
 import fs from "fs";
@@ -41,7 +41,7 @@ async function buildInfo(options = {}) {
           'git log -1 --pretty=format:"%ae"'
         ).stdout,
         lastCommitter: execaCommandSync('git log -1 --pretty=format:"%cn"')
-          .stdoutt,
+          .stdout,
         lastCommitterEmail: execaCommandSync('git log -1 --pretty=format:"%ce"')
           .stdout,
         lastCommitTime: execaCommandSync('git log -1 --pretty=format:"%ci"')
@@ -71,17 +71,17 @@ async function buildInfo(options = {}) {
     });
 
     const buildInfoString = Object.entries(buildInfoObj)
-      .map(
-        ([key, value]) =>
-          `<div style="display:flex;">
+      .map(([key, value]) => {
+        console.log(key, value);
+        return `<div style="display:flex;">
                         <div style="min-width:300px;">${key}: </div>
                         <div style="font-weight;600; max-width:500px">${value.replace(
                           /^"|"$/g,
                           ""
                         )}</div>
                     </div>
-                    <br/> `
-      )
+                    <br/> `;
+      })
       .join("");
 
     return `<!DOCTYPE html>
