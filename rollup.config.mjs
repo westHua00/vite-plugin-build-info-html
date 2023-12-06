@@ -3,8 +3,8 @@
  * @Author: weipeng11132@navinfo.com
  * @Date: 2023-07-26 16:24:14
  * @LastEditors: weipeng11132@navinfo.com
- * @LastEditTime: 2023-07-27 10:17:37
- * @FilePath: \vite-plugin-build-info-html\rollup.config.js
+ * @LastEditTime: 2023-12-06 11:18:28
+ * @FilePath: \vite-plugin-build-info-html\rollup.config.mjs
  */
 import terser from "@rollup/plugin-terser";
 import cleanup from "rollup-plugin-cleanup";
@@ -30,7 +30,7 @@ export default {
     cleanup(),
     terser({
       compress: {
-        drop_console: true,
+        drop_console: false,
         drop_debugger: true,
         keep_infinity: true,
       },
