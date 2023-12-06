@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf ./dist && rollup -c"
+    "build": "rimraf ./dist && rollup -c",
+    "release": "npx bumpp --push --tag --commit && pnpm publish"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "@rollup/plugin-commonjs": "^25.0.3",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-terser": "^0.4.3",
+    "bumpp": "^9.2.0",
     "execa": "^7.1.1",
     "rimraf": "^5.0.1",
     "rollup": "^3.26.3",
